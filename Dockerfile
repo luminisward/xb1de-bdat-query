@@ -18,4 +18,6 @@ FROM alpine:3.19
 
 COPY --from=builder /app/main /main
 
+ENV GIN_MODE=release
+
 CMD /main
