@@ -17,6 +17,5 @@ RUN go build -o main .
 FROM alpine:3.19
 
 COPY --from=builder /app/main /main
-COPY --from=builder /app/config.json /config.json
 
 CMD /main
