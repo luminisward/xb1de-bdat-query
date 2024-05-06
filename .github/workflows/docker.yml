@@ -12,8 +12,8 @@ jobs:
     permissions:
       packages: write
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
 
       - name: Set up Docker Buildx
         id: buildx
