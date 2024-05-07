@@ -8,10 +8,8 @@ import (
 
 func main() {
 	r := gin.Default()
-	//r.Use(cors.Default())
 
-	apiGroup := r.Group("api")
-	apiGroup.POST("translations", controllers.Translations)
+	r.POST("translations", controllers.Translations)
 
 	r.Run(config.GetConfig().Addr) // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
